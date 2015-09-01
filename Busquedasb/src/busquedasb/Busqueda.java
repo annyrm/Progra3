@@ -21,37 +21,32 @@ public abstract class Busqueda {/*
     es decir no tendrá indicaciones, ya que estan se darán en dos clases hijas llamadas Secuencia y Binariam cada una contendrá el tipo de 
     busqueda con los mismos nombres
     */
-    int [] vectorS;/*Declaración del atributo vectorS (secuencial), se utiliza el encapsulamiento
+    int [] vector;/*Declaración del atributo vectorS (secuencial), se utiliza el encapsulamiento
     para que éstos atributos permanezcan privados y solo sean accedidos por las clases hijas
     */
     int [] vectorB;/*Declaración del atributo vectorB (binario), se utiliza el encapsulamiento
     para que éstos atributos permanezcan privados y solo sean accedidos por las clases hijas
     */
 
-    public Busqueda(int[] vectorS, int[] vectorB) {/*Constructor de la clase, que inicializa
+    public Busqueda(int[] vector, int[] vectorB) {/*Constructor de la clase, que inicializa
         los atributos de la clase, es decir el vector Secuencial y el vector Binario*/ 
-        this.vectorS = vectorS;//Se asigna el atributo vector a la variable del mismo nombre, por lo que se usa el this
+        this.vector = vector;//Se asigna el atributo vector a la variable del mismo nombre, por lo que se usa el this
         this.vectorB = vectorB;//Se asigna el atributo vector a la variable del mismo nombre, por lo que se usa el this
     }
 
     public Busqueda(){/*Segundo constructor de la clase Busqueda, en donde le usuario
         no necesita dar atributos para crear el objeto*/
-        this.vectorS = vectorS;//Se asigna el atributo vector a la variable del mismo nombre, por lo que se usa el this
+        this.vector = vector;//Se asigna el atributo vector a la variable del mismo nombre, por lo que se usa el this
         this.vectorB = vectorB;//Se asigna el atributo vector a la variable del mismo nombre, por lo que se usa el this
     }
     
-    public int [] getVector(int a){/*Se crea el método vector en donde se determinará cual de las dos variables, 
+    public int [] getVector(){/*Se crea el método vector en donde se determinará cual de las dos variables, 
         se utilizará, utilizamos la introducción de una variable a, para crear una condicional y regresar un vector u otro.
         */
-        if (a == 1){//Si a es igual a 1, entonces se escogerá (el método regresará) el vector tipo secuencial
-            return vectorS;//Se da la orden de devolver el vector secuencial
-        }
-        else{//si la anterior condición no se cumple, entonces el programa devolverá el vector binario
-            return vectorB;
-        }
+        return vector;
     }//Final del método getVector
     
-    public void crearVector(int a){/*
+    public int [] crearVector(){/*
         Se crea el método crearVector(igualmente se introduce el entero a, por el uso que se da al método anterior [getVector()] y la necesidad
         de especificar el tipo de vector que regresará), el propósito de este método es llenar el arreglo en el que se buscará
         un número determinado por el usuario.
@@ -61,19 +56,19 @@ public abstract class Busqueda {/*
         sc = new Scanner(System.in);//Con esta línea se crea el objeto sc del tipo Scanner, y se establece que la información será introducida por el usuario (System.in)
         System.out.println("Escribe el tamaño del arreglo: ");//Se muestra mensaje en pantalla
         int n = sc.nextInt();//A la variable n del tipo entero se le asigna cualquier valor que sea introducido por el usuario       
-       
+        int arr[] = new int [n];
       for (int i = 0; i < n; i++){/*
           Se crea un ciclo for para la introducción de los datos dentro del arreglo, la primera parte inicializa un contador llamado i
           para llevar el control de las "vueltas que dará el ciclo, la segunda parte establece la condición que detendrá el curso del ciclo
           */
           System.out.println("Escribe el dato " + i + " : ");//Se muestra en pantalla un mensaje para dar indicación al usuario de lo que se le esta pidiendo
                 
-        	getVector(a)[i] = sc.nextInt();/*Aquí es donde se da la orden para que cada uno de los datos introducidos 
+        	arr[i] = sc.nextInt();/*Aquí es donde se da la orden para que cada uno de los datos introducidos 
                 por el usuario se guarden en un espacio del arreglo
                 */
     }
     
-    
+    return arr;
 }//Fin de crear vector
     
     public int solicitarElemento(){/*Creación del método solicitarElemento, en el cual se pedira al usuario el número que desea buscar en el arreglo
@@ -86,15 +81,15 @@ public abstract class Busqueda {/*
        return e;//Para terminar este método "se regresa" o se guarda el valor de la variable e 
     }//Fin de solicitar elemento
     
-    public void mostrarArreglo(int a, int [] vector){/* Creamos este método con el propósito de verificar
+    public void mostrarArreglo(int [] vector){/* Creamos este método con el propósito de verificar
         la correcta implementación del arreglo, y de manera estética para checar que todos los valores introducidos por el usuario
         efectivamente esten en el vector
         */
-        for ( int i = 0; i < getVector(a).length; i++){/*Nuevamente en este método se hace uso del ciclo for
+        for ( int i = 0; i < vector.length; i++){/*Nuevamente en este método se hace uso del ciclo for
             en el que la primera parte se utiliza para declarar un contador llamado i, que nos ayudará a supervisar el número de veces que se llevará a cabo la actividad
             dentro del for, la segunda parte determina un límite para que termine el proceso y la última es la función propiamente de un contador. 
             */
-          System.out.println(" | " + getVector(a)[i] );/*Esta línea es la que servirá para mostrar en pantalla el arreglo con los datos introducidos por el
+          System.out.print(" | " + vector[i] );/*Esta línea es la que servirá para mostrar en pantalla el arreglo con los datos introducidos por el
           usuario. La función getVector(a) es la que propiamente contiene el arreglo y la i simboliza el espacio indicado (y por supuesto el valor guardado en el)
           */
           
@@ -121,7 +116,7 @@ public abstract class Busqueda {/*
         }
     }
     
-    abstract public int buscar(int a);/*Declaración del método abstracto correr que será implementado en cada una 
+    abstract public int buscar();/*Declaración del método abstracto correr que será implementado en cada una 
     de las clases hijas (Secuencia, Binaria) con el uso de @Override*/
     
 

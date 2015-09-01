@@ -20,17 +20,17 @@ public class Binaria extends Busqueda{/*Creación de la clase hija Binaria, la c
     */
     
     @Override//Se utiliza el comando override para indicar que esta es la implementación del método buscar en la clase padre
-    public int buscar(int a) {/*
+    public int buscar() {/*
         Implementación del método abstracto buscar, para la clase Binaria, el cuál hará  una busqueda binaria
         de un determinado dato dentro de un arreglo
         */
         int inicio, fin, centro, valorCentro;//Declaracion de variables 
         
         inicio = 0;//inicializar inicio en 0
-        fin = getVector(a).length - 1;// el valor de fin sera igual a la longitud del vector menos 1
+        fin = vector.length - 1;// el valor de fin sera igual a la longitud del vector menos 1
         while(inicio < fin){//Mientras el valor de inicio se menor que fin entonces 
           centro = (inicio + fin)/ 2;//Centro valdra (inicio + fin) entre dos
-          valorCentro = getVector(a)[centro];// el valor del centro, tomará el valor de la posición centro dentro del arreglo
+          valorCentro = vector[centro];// el valor del centro, tomará el valor de la posición centro dentro del arreglo
           if(valorCentro == solicitarElemento()){//Si el valor del centro es igual al valor solicitado por el usuario, entonces
               return centro;//regresamos el valor de centro, pues es el que buscamos
           }else{//Sino 
@@ -52,6 +52,21 @@ public class Binaria extends Busqueda{/*Creación de la clase hija Binaria, la c
        
         
         
+    }
+    public void ordenamientoSeleccion(int v[]){
+        int i, j, m, aux;
+        for(i = 0; i < v.length - 1; i++){  
+            m = i;  
+            for(j = i+1; j < v.length; j++){  
+                if(v[j] < v[m]) 
+                 m =  j;  
+                  
+                    aux = v[i];  
+                    v[i] = v[m];  
+                    v[m] = aux;  
+                  
+            }  
+        }  
     }
     
 }

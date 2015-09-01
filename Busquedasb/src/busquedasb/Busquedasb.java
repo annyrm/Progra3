@@ -23,30 +23,32 @@ public class Busquedasb {
      */
     public static void main(String[] args) {
         int a = 0;
-        Menu menu = new Menu(a);
+        
        int vector1[] = new int [1000];
        int vector2[] = new int [1000];
        int num;
        
        
         
-        if (a == 1){
+        
+       
             Secuencia buscarS = new Secuencia();
-            buscarS.crearVector(1);
-            vector1 = buscarS.getVector(1);
+            vector1 = buscarS.crearVector();
             
+            buscarS.mostrarArreglo(vector1);
+            num = buscarS.solicitarElemento();
+            int r = buscarS.buscar();
+            buscarS.mostrarResultado(r);
             
             
             
             
             
                         
-            }
-        else{
+           
             Binaria buscarB = new Binaria();
-            vector2 = buscarB.getVector(0);
-            num = buscarB.solicitarElemento();
-        }
-    }
+           
+      
     
+}
 }
