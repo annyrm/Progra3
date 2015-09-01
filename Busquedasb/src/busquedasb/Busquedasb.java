@@ -22,14 +22,14 @@ public class Busquedasb {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-     
+        int a = 0;
+        Menu menu = new Menu(a);
        int vector1[] = new int [1000];
        int vector2[] = new int [1000];
        int num;
        
        
-        int a = sc.nextInt();
+        
         if (a == 1){
             Secuencia buscarS = new Secuencia();
             buscarS.crearVector(1);
