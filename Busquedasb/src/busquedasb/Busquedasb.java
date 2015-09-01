@@ -13,7 +13,7 @@ import java.util.Scanner;
  * 512873
  *  * Josue Alexis Ramírez 513622
  * Jose María de la Garza 513097
- * Luis Iván García
+ * Luis Iván García 1410530
  * 3er Semestre ITIC
  */
 public class Busquedasb {
@@ -28,7 +28,7 @@ public class Busquedasb {
        int vector2[] = new int [1000];
        int num;
        
-       System.out.println("¿Qué tipo de vector quieres crear? 1. Secuencial 2. Binario");
+       
         int a = sc.nextInt();
         if (a == 1){
             Secuencia buscarS = new Secuencia();
