@@ -20,7 +20,15 @@ public class Menu {
         System.out.println("2.- Busqueda Binaria");
         System.out.print("==> ");
         a = sc.nextInt();
-        
+        System.out.println("");
+        if(a==1){
+            System.out.println("**__Busqueda Secuencial__**");
+            System.out.println("");
+        }
+        else{
+            System.out.println("**_Busqueda Binario__**");
+            System.out.println("");
+        }
     }
 
     
