@@ -7,12 +7,12 @@ package busquedasb;
 
 import java.util.Scanner;//Se importa el paquete java.util.Scanner para utilizar la clase Scanner y leer los datos introducidos por el usuario
 
-/*
- * Ana Teresa Ramírez Morones
- * 512873
+/*Jumpstarter
+ *Brincamos hacia la cima
+ * Ana Teresa Ramírez Morones 512873
  * Josue Alexis Ramírez 513622
  * Jose María de la Garza 513097
- *Luis Iván García
+ * Luis Iván García A01410530
  * 3er Semestre ITIC
  */
 
@@ -117,12 +117,12 @@ public abstract class Busqueda {/*
     abstract public int Busqueda(int [] arr, int e);/*Declaración del método abstracto correr que será implementado en cada una 
     de las clases hijas (Secuencia, Binaria) con el uso de @Override*/
     
-    public void SetVector(int [] v){
-        vector = v;
+    public void SetVector(int [] v){ //Inicio del metodo SetVector
+        vector = v; // Se le asigna a la variable vector un nuevo valor
     }
     
-    public int [] GetVector(){
-        return vector;
+    public int [] GetVector(){ //Inicio del metodo GetVector
+        return vector; // Regresa la variable vector
     }
 
 }
