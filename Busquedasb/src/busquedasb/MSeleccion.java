@@ -7,8 +7,8 @@ package busquedasb;
 
 /**
  *
- * @author Ana
+ * @author LuisIván
  */
-public class OrdenamientoSeleccion {
+class MSeleccion {
     
 }

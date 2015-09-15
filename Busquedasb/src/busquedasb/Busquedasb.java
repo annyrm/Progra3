@@ -16,14 +16,14 @@ import java.util.Scanner;
  * Luis Iván García 1410530
  * 3er Semestre ITIC
  */
-public class Busquedasb {
+public class Busquedasb implements MOrdenamiento{
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
               
-       int [] vector1 = new int [1000];
+       int [] vector1;
        int num, r, opcion;
        Scanner sc = new Scanner (System.in);
        menu();
