@@ -8,10 +8,10 @@ package busquedasb;
 import java.util.Scanner;
 
 /**
- *
- * Ana Teresa Ramírez Morones
- * 512873
- *  * Josue Alexis Ramírez 513622
+ *Jumpstarters
+ * "Saltaremos hasta llegar a la cima"
+ * Ana Teresa Ramírez Morones 512873
+ * Josue Alexis Ramírez 513622
  * Jose María de la Garza 513097
  * Luis Iván García 1410530
  * 3er Semestre ITIC
@@ -69,18 +69,18 @@ public class Busquedasb{
 	     System.out.println("     M   E   N    U");
 	     System.out.println("1.- Método de Selección");
 	     System.out.println("2.- Método Burbuja");
-             System.out.println("3.- Método QuickSort");
+             System.out.println("3.- Método QuickSort"); //Con esto se le aparece las opciones del menu al usuario 
              
              System.out.print("OPCION ==> ");
-			      int opcion = sc.nextInt();
+			      int opcion = sc.nextInt(); // Se le pide al usuario que escoja unas de las opciones del menu
                               
-                               switch(opcion) {
+                               switch(opcion) { //Inicio del switch
 			                     case 1: 
-                                                 OBinario.MSeleccion(v);
+                                                 OBinario.MSeleccion(v); // Escoge un uno, lo lleva al metodo de selección
 			                            break;
-			                     case 2: OBinario.MBurbuja(v);
+			                     case 2: OBinario.MBurbuja(v); // Escoge un dos, lo lleva al metodo burbuja
 			                            break;
-			                     case 3: OBinario.MQSort(v, d, i);
+			                     case 3: OBinario.MQSort(v, d, i); // Escoge un tres, lo lleva al metodo Quicksort
 			                            break;
 			                     case 4: 
 			                            break;
