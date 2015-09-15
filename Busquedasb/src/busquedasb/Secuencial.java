@@ -13,9 +13,10 @@ package busquedasb;
  * Jose María de la Garza 513097
  * Luis Iván García
  * 3er Semestre ITIC
- */
-public class Secuencia extends Busqueda{/*
-    Creación de la clase hija Secuencia, la cual hereda de la Busqueda el método abstracto buscar,
+ */ 
+public class Secuencial extends Busqueda{
+    
+   /*Creación de la clase hija Secuencia, la cual hereda de la Busqueda el método abstracto buscar,
     en esta clase se implementará dicho método, haciendo énfasis en el tipo de búsqueda secuencial, 
     la cual puede ser realizada en un arreglo no ordenado, ya que recorrerá elemento por elemento hasta encontrar el dato deseado
     */
@@ -44,8 +45,5 @@ public class Secuencia extends Busqueda{/*
     }
         return -1;//Si el ciclo termina y no se encontro el elemento entonces se regresa -1
         
-  }
-
-    
-    
+  } 
 }

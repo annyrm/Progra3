@@ -24,20 +24,18 @@ public abstract class Busqueda {/*
     private int [] vector;/*Declaración del atributo vectorS (secuencial), se utiliza el encapsulamiento
     para que éstos atributos permanezcan privados y solo sean accedidos por las clases hijas
     */
-    int [] vectorB;/*Declaración del atributo vectorB (binario), se utiliza el encapsulamiento
-    para que éstos atributos permanezcan privados y solo sean accedidos por las clases hijas
-    */
+    
 
-    public Busqueda(int[] vector, int[] vectorB) {/*Constructor de la clase, que inicializa
+    public Busqueda(int[] vector) {/*Constructor de la clase, que inicializa
         los atributos de la clase, es decir el vector Secuencial y el vector Binario*/ 
         this.vector = vector;//Se asigna el atributo vector a la variable del mismo nombre, por lo que se usa el this
-        this.vectorB = vectorB;//Se asigna el atributo vector a la variable del mismo nombre, por lo que se usa el this
+        //Se asigna el atributo vector a la variable del mismo nombre, por lo que se usa el this
     }
 
     public Busqueda(){/*Segundo constructor de la clase Busqueda, en donde le usuario
         no necesita dar atributos para crear el objeto*/
         this.vector = vector;//Se asigna el atributo vector a la variable del mismo nombre, por lo que se usa el this
-        this.vectorB = vectorB;//Se asigna el atributo vector a la variable del mismo nombre, por lo que se usa el this
+        //Se asigna el atributo vector a la variable del mismo nombre, por lo que se usa el this
     }
     
     public int [] getVector(){/*Se crea el método vector en donde se determinará cual de las dos variables, 
@@ -46,7 +44,7 @@ public abstract class Busqueda {/*
         return vector;
     }//Final del método getVector
     
-    public int [] crearVector(){/*
+    public int [] CrearVector(){/*
         Se crea el método crearVector(igualmente se introduce el entero a, por el uso que se da al método anterior [getVector()] y la necesidad
         de especificar el tipo de vector que regresará), el propósito de este método es llenar el arreglo en el que se buscará
         un número determinado por el usuario.
@@ -71,7 +69,7 @@ public abstract class Busqueda {/*
     return vector;
 }//Fin de crear vector
     
-    public int solicitarElemento(){/*Creación del método solicitarElemento, en el cual se pedira al usuario el número que desea buscar en el arreglo
+    public int QueBusco(){/*Creación del método solicitarElemento, en el cual se pedira al usuario el número que desea buscar en el arreglo
         en este metodo no se solicita ningun atributo, pues solamente se utilizará para guardar en la memoria un número determiando por el usuario
         */
         Scanner sc;//Nuevamente se utiliza la clase Scanner y se le da el nombre sc el cual utilizaremos para introducir datos
@@ -81,7 +79,7 @@ public abstract class Busqueda {/*
        return e;//Para terminar este método "se regresa" o se guarda el valor de la variable e 
     }//Fin de solicitar elemento
     
-    public void mostrarArreglo(int [] vector){/* Creamos este método con el propósito de verificar
+    public void MostrarVector(int [] vector){/* Creamos este método con el propósito de verificar
         la correcta implementación del arreglo, y de manera estética para checar que todos los valores introducidos por el usuario
         efectivamente esten en el vector
         */
@@ -98,7 +96,7 @@ public abstract class Busqueda {/*
      System.out.println("");
 }//Fin de mostrar arreglo
     
-    public void mostrarResultado(int n){/*Creaci+on del método
+    public void MostrarResultado(int n){/*Creaci+on del método
         encargado de mostrar al usuario si el número que buscaba se encuentra o no dentro del 
         vector que introdujo previamente, la variable n será representada por el valor
         que se obtenga del método buscar
@@ -116,26 +114,15 @@ public abstract class Busqueda {/*
         }
     }
     
-    abstract public int buscar(int [] arr, int e);/*Declaración del método abstracto correr que será implementado en cada una 
+    abstract public int Busqueda(int [] arr, int e);/*Declaración del método abstracto correr que será implementado en cada una 
     de las clases hijas (Secuencia, Binaria) con el uso de @Override*/
     
-    public void ordenamientoSeleccion(int [] v){
-        int i, j, m, aux;
-        for(i = 0; i < v.length - 1; i++){  
-            m = i;  
-            for(j = i+1; j < v.length; j++){  
-                if(v[j] < v[m]){ 
-                 m =  j;  
-                }
-                
-                  
-                    aux = v[i];  
-                    v[i] = v[m];  
-                    v[m] = aux; 
-                                  
-            }  
-        }  
-        
+    public void SetVector(int [] v){
+        vector = v;
+    }
+    
+    public int [] GetVector(){
+        return vector;
     }
 
 }
