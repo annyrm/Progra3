@@ -6,17 +6,17 @@
 package busquedasb;
 
 /**
- *
-* Ana Teresa Ramírez Morones
- * 512873
+ * Jumpstarters
+ * Brincando hacia la cima
+ * Ana Teresa Ramírez Morones 512873
  * Josue Alexis Ramírez 513622
  * Jose María de la Garza 513097
- * Luis Iván García
+ * Luis Iván García  A01410530
  * 3er Semestre ITIC
  */
 public class Binaria extends Busqueda implements MOrdenamiento{/*Creación de la clase hija Binaria, la cual hereda de la Busqueda el método abstracto buscar,
     en esta clase se implementará dicho método, haciendo énfasis en el tipo de búsqueda binaria, 
-    la cual puede ser realizada solamente en un arreglo ordenado
+    la cual puede ser realizada solamente en un arreglo ordenado, ademas de que implementa lo que esta en la clase MOrdenamiento
     */
     
     @Override//Se utiliza el comando override para indicar que esta es la implementación del método buscar en la clase padre
@@ -55,7 +55,7 @@ public class Binaria extends Busqueda implements MOrdenamiento{/*Creación de la
     }
     
     @Override
-     public void MSeleccion(int V[]){ 
+     public void MSeleccion(int V[]){ //Se inicia el metodo de ordenamiento Selección
         int i, j, menor, pos, tmp;
           for (i = 0; i < V.length - 1; i++) { // tomamos como menor el primero
                 menor = V[i]; // de los elementos que quedan por ordenar
@@ -74,18 +74,18 @@ public class Binaria extends Busqueda implements MOrdenamiento{/*Creación de la
           }
     }
     @Override
-    public void MBurbuja(int V[]){
+    public void MBurbuja(int V[]){ //Se inicia el metodo de ordenamiento Burbuja
          int i, j, aux;
-         for(i=0;i<V.length-1;i++)
-              for(j=0;j<V.length-i-1;j++)
-                   if(V[j+1]<V[j]){
+         for(i=0;i<V.length-1;i++)//Se abre el primer ciclo para controlar el vector
+              for(j=0;j<V.length-i-1;j++)//Se abre el segundo ciclo para ordenar
+                   if(V[j+1]<V[j]){//Si un dato es menor que el anterior
                       aux=V[j+1];
                       V[j+1]=V[j];
-                      V[j]=aux;
+                      V[j]=aux;//Se cambia los datos
                    }
     }
     @Override
-    public void MQSort(int V[],int der,int izq){
+    public void MQSort(int V[],int der,int izq){ //Se inicia el metodo de ordenamiento Quicksort
          int pivote=V[izq]; // tomamos primer elemento como pivote
             int i=izq; // i realiza la búsqueda de izquierda a derecha
             int j=der; // j realiza la búsqueda de derecha a izquierda
