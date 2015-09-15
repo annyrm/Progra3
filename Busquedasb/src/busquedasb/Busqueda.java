@@ -21,7 +21,7 @@ public abstract class Busqueda {/*
     es decir no tendrá indicaciones, ya que estan se darán en dos clases hijas llamadas Secuencia y Binariam cada una contendrá el tipo de 
     busqueda con los mismos nombres
     */
-    int [] vector;/*Declaración del atributo vectorS (secuencial), se utiliza el encapsulamiento
+    private int [] vector;/*Declaración del atributo vectorS (secuencial), se utiliza el encapsulamiento
     para que éstos atributos permanezcan privados y solo sean accedidos por las clases hijas
     */
     int [] vectorB;/*Declaración del atributo vectorB (binario), se utiliza el encapsulamiento
@@ -56,19 +56,19 @@ public abstract class Busqueda {/*
         sc = new Scanner(System.in);//Con esta línea se crea el objeto sc del tipo Scanner, y se establece que la información será introducida por el usuario (System.in)
         System.out.println("Escribe el tamaño del arreglo: ");//Se muestra mensaje en pantalla
         int n = sc.nextInt();//A la variable n del tipo entero se le asigna cualquier valor que sea introducido por el usuario       
-        int arr[] = new int [n];
+        int vector[] = new int [n];
       for (int i = 0; i < n; i++){/*
           Se crea un ciclo for para la introducción de los datos dentro del arreglo, la primera parte inicializa un contador llamado i
           para llevar el control de las "vueltas que dará el ciclo, la segunda parte establece la condición que detendrá el curso del ciclo
           */
           System.out.println("Escribe el dato " + i + " : ");//Se muestra en pantalla un mensaje para dar indicación al usuario de lo que se le esta pidiendo
                 
-        	arr[i] = sc.nextInt();/*Aquí es donde se da la orden para que cada uno de los datos introducidos 
+        	vector[i] = sc.nextInt();/*Aquí es donde se da la orden para que cada uno de los datos introducidos 
                 por el usuario se guarden en un espacio del arreglo
                 */
     }
     
-    return arr;
+    return vector;
 }//Fin de crear vector
     
     public int solicitarElemento(){/*Creación del método solicitarElemento, en el cual se pedira al usuario el número que desea buscar en el arreglo
@@ -92,10 +92,10 @@ public abstract class Busqueda {/*
           System.out.print(" | " + vector[i] );/*Esta línea es la que servirá para mostrar en pantalla el arreglo con los datos introducidos por el
           usuario. La función getVector(a) es la que propiamente contiene el arreglo y la i simboliza el espacio indicado (y por supuesto el valor guardado en el)
           */
-          
+         
         	
     }//Fin de for
-    
+     System.out.println("");
 }//Fin de mostrar arreglo
     
     public void mostrarResultado(int n){/*Creaci+on del método
@@ -116,8 +116,26 @@ public abstract class Busqueda {/*
         }
     }
     
-    abstract public int buscar();/*Declaración del método abstracto correr que será implementado en cada una 
+    abstract public int buscar(int [] arr, int e);/*Declaración del método abstracto correr que será implementado en cada una 
     de las clases hijas (Secuencia, Binaria) con el uso de @Override*/
     
+    public void ordenamientoSeleccion(int [] v){
+        int i, j, m, aux;
+        for(i = 0; i < v.length - 1; i++){  
+            m = i;  
+            for(j = i+1; j < v.length; j++){  
+                if(v[j] < v[m]){ 
+                 m =  j;  
+                }
+                
+                  
+                    aux = v[i];  
+                    v[i] = v[m];  
+                    v[m] = aux; 
+                                  
+            }  
+        }  
+        
+    }
 
 }
