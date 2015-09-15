@@ -16,7 +16,7 @@ import java.util.Scanner;
  * Luis Iván García 1410530
  * 3er Semestre ITIC
  */
-public class Busquedasb implements MOrdenamiento{
+public class Busquedasb{
 
     /**
      * @param args the command line arguments
@@ -58,14 +58,36 @@ public class Busquedasb implements MOrdenamiento{
         //Se muestra el resultado.
         OSecuencial.MostrarResultado(b);
     }
-    public static void menu(,int[]v){/*Método encargado de desplegar las posibles opciones del menú
+    public static void menu(Binaria OBinario,int[]v){/*Método encargado de desplegar las posibles opciones del menú
        Este método solo muestra en pantalla que acciones pueden hacerse en cada una de las 
         opciones del menú. 
         */
-
+            int i = 0;
+            int d = v.length -1;
+            Scanner sc;
+            sc = new Scanner(System.in);
 	     System.out.println("     M   E   N    U");
-	     System.out.println("1.- Arreglo Secuencial");
-	     System.out.println("2.- Arreglo Binario");
-             System.out.println("3.- S  A  L  I  R");
+	     System.out.println("1.- Método de Selección");
+	     System.out.println("2.- Método Burbuja");
+             System.out.println("3.- Método QuickSort");
+             
+             System.out.print("OPCION ==> ");
+			      int opcion = sc.nextInt();
+                              
+                               switch(opcion) {
+			                     case 1: 
+                                                 OBinario.MSeleccion(v);
+			                            break;
+			                     case 2: OBinario.MBurbuja(v);
+			                            break;
+			                     case 3: OBinario.MQSort(v, d, i);
+			                            break;
+			                     case 4: 
+			                            break;
+			      }//fin del switch
+
+             
+             
+             
 	    }// fin del método menu
 }
