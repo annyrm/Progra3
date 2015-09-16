@@ -6,8 +6,13 @@
 package busquedasb;
 
 /**
- *
- * @author Ana
+ *Jumpstarters
+ *"Vamos a brincar hasta la cima"
+ * Ana Teresa Ramírez Morones 512873
+ * Josue Alexis Ramírez 513622
+ * Jose María de la Garza 513097
+ * Luis Iván García 1410530
+ * 3er Semestre ITIC
  */
 import java.util.Scanner;
 public class Choose {
