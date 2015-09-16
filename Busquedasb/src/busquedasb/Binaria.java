@@ -7,7 +7,7 @@ package busquedasb;
 
 /**
  * Jumpstarters
- * "Saltaremos hasta llegar a la cima"
+ * "Vamos a brincar hasta la cima"
  * Ana Teresa Ramírez Morones 512873
  * Josue Alexis Ramírez 513622
  * Jose María de la Garza 513097
