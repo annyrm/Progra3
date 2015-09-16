@@ -6,14 +6,15 @@
 package busquedasb;
 
 /**
- *
- * Ana Teresa Ramírez Morones
- * 512873
- *  * Josue Alexis Ramírez 513622
+ *Jumpstarters
+ * "Saltaremos hasta llegar a la cima"
+ * Ana Teresa Ramírez Morones 512873
+ * Josue Alexis Ramírez 513622
  * Jose María de la Garza 513097
- * Luis Iván García
+ * Luis Iván García 1410530
  * 3er Semestre ITIC
  */
+ 
 public class Secuencia extends Busqueda{/*
     Creación de la clase hija Secuencia, la cual hereda de la Busqueda el método abstracto buscar,
     en esta clase se implementará dicho método, haciendo énfasis en el tipo de búsqueda secuencial, 
