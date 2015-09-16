@@ -8,7 +8,7 @@ package busquedasb;
 import java.util.Scanner;//Se importa el paquete java.util.Scanner para utilizar la clase Scanner y leer los datos introducidos por el usuario
 
 /*Jumpstarter
- *Brincamos hacia la cima
+ *"Saltaremos hasta llegar a la cima"
  * Ana Teresa Ramírez Morones 512873
  * Josue Alexis Ramírez 513622
  * Jose María de la Garza 513097
